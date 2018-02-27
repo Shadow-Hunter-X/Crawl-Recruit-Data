@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7e75f170-45e2-48b4-965a-38a661a33f92</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>DataAnalysisX\run.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>DataAnalysis</Name>
+    <RootNamespace>DataAnalysis</RootNamespace>
+    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DataAnalysis.py" />
+    <Compile Include="DataAnalysisX\DataAnalysisX\items.py" />
+    <Compile Include="DataAnalysisX\DataAnalysisX\middlewares.py" />
+    <Compile Include="DataAnalysisX\DataAnalysisX\pipelines.py" />
+    <Compile Include="DataAnalysisX\DataAnalysisX\settings.py" />
+    <Compile Include="DataAnalysisX\DataAnalysisX\spiders\OperationSpider.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAnalysisX\DataAnalysisX\spiders\SoftwareSpider.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAnalysisX\DataAnalysisX\spiders\__init__.py" />
+    <Compile Include="DataAnalysisX\DataAnalysisX\__init__.py" />
+    <Compile Include="DataAnalysisX\run.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAnalysisX\" />
+    <Folder Include="DataAnalysisX\DataAnalysisX\" />
+    <Folder Include="DataAnalysisX\DataAnalysisX\spiders\" />
+    <Folder Include="DataAnalysisX\DataAnalysisX\spiders\__pycache__\" />
+    <Folder Include="DataAnalysisX\DataAnalysisX\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataAnalysisX\scrapy.cfg" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\2.7" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
