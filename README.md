@@ -1,0 +1,2 @@
+# Crawl-Recruit-Data
+抓取智联招聘和百度搜索的数据并进行分析,使用visual studio编写代码mongodb和SQLServer存储数据
